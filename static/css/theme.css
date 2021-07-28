@@ -1,0 +1,175 @@
+/* General setup */
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: 'Nunito', Arial, Helvetica, sans-serif;
+}
+
+.no-display {
+  display: none;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+a {
+  color: inherit;
+}
+
+input {
+  color: white;
+  background-color: #2f74ce;
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  font: inherit;
+  cursor: pointer;
+  outline: none;
+}
+
+button:active {
+  background-color: #1d4b88;
+}
+
+/* HEADER */
+
+.header,
+.menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.menu {
+  flex-grow: 2;
+  margin: 0 1rem;
+}
+
+.menu-item a,
+.sub-menu-name {
+  padding: 1rem;
+  display: block;
+  position: relative;
+  white-space: nowrap;
+}
+
+.menu-link {
+  transition: all 0.3s ease;
+}
+
+.menu-link:hover,
+.menu-link:active {
+  background-color: #ddd;
+}
+
+.sub-items {
+  position: absolute;
+  float: left;
+  transition: all 0.3s ease;
+  opacity: 1;
+  visibility: visible;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.header-logo img {
+  height: 7rem;
+  display: block;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 970px) {
+  .header {
+    flex-wrap: wrap;
+  }
+
+  .menu {
+    order: 1;
+    flex-direction: column;
+    flex-basis: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .menu-icons,
+  .call-to-action {
+    flex-basis: 5rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .sub-items {
+    position: static;
+    margin-left: 2rem;
+    float: none;
+  }
+}
+
+.hamburger,
+.cross {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.collapsible {
+  transition: all 0.3s ease-in-out;
+  transform-origin: top;
+}
+
+.flatten {
+  transform: scaleY(0);
+  height: 0;
+}
+
+.fa-chevron-down {
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.turn-chevron {
+  transform: rotate(180deg);
+}
+
+/* FOOTER */
+
+footer {
+  background-color: #222;
+  color: #c0c0c0;
+  padding: 3rem;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-text {
+  flex-basis: 50%;
+}
+
+.social-media-links i {
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+}
+
+.fa-facebook:hover {
+  color: #3b5998;
+}
+
+.fa-twitter:hover {
+  color: #1da1f2;
+}
+
+@media only screen and (max-width: 530px) {
+  .social-media-links {
+    display: flex;
+    flex-direction: column;
+  }
+}
