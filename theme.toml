@@ -3,19 +3,13 @@
 
 name = "Philo Hugo Theme"
 license = "MIT"
-licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE"
-description = ""
-homepage = "http://example.com/"
+licenselink = "https://github.com/philomusica/philo-hugo-theme/blob/main/LICENSE"
+description = "Theme for the Philomusica website"
+homepage = "https://philomusica.org.uk"
 tags = []
 features = []
 min_version = "0.41.0"
 
 [author]
-  name = ""
-  homepage = ""
-
-# If porting an existing theme
-[original]
-  name = ""
-  homepage = ""
-  repo = ""
+  name = "Joshua Crunden"
+  homepage = "https://philomusica.org.uk"
