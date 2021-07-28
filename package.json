@@ -4,7 +4,7 @@
   "description": "Hugo theme for Philomusica's website",
   "main": "index.js",
   "scripts": {
-    "lint": "npx eslint **/*.js && npx stylelint **/*.css",
+    "lint": "npx eslint \"static/js/**/*.js\" && npx stylelint \"static/css/**/*.css\"",
     "test": "jest"
   },
   "repository": {
