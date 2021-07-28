@@ -1,11 +1,9 @@
-<!DOCTYPE html>
-<html lang="en" class="no-js">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>List template</title>
-    </head>
-    <body>
-        <h1>This is from the list template</h1>
-    </body>
-</html>
+{{ define "main" }}
+  <h1>Posts</h1>
+  {{ range .Pages }}
+    <article>
+      <h2>{{ .Title }}</h2>
+      {{ .Content }}
+    </article>
+  {{ end }}
+{{ end }}

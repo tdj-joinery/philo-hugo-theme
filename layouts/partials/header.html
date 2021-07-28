@@ -1,0 +1,25 @@
+<div class="header">
+  <div class="menu-icons">
+    <i aria-hidden="true" title="Open Menu" class="fas fa-bars hamburger"></i>
+    <i aria-hidden="true" title="Close Menu" class="fas fa-times cross"></i>
+  </div>
+  <div class="header-logo">
+        <img alt="Philomusica logo" src="${logo}"/>
+  </div>
+  <nav class="menu">
+    {{ range .Pages.ByWeight }}
+      {{ if not (eq .Params.noMenu true) }}
+        <div class="menu-item">
+          <a class="menu-link" href="#">{{ .Title }}</a>
+          {{ if .Pages }}
+            <div class="sub-items hidden">
+              {{ range .Pages }}
+                <a class="menu-link" href="#">{{ .Title }}</a>
+              {{ end }}
+            </div>
+          {{ end }}
+        </div>
+      {{ end }}
+    {{ end }}
+  </nav>
+</div>
