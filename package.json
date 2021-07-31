@@ -1,0 +1,26 @@
+{
+  "name": "philo-hugo-theme",
+  "version": "0.0.1",
+  "description": "Hugo theme for Philomusica's website",
+  "main": "index.js",
+  "scripts": {
+    "lint": "npx eslint \"static/js/**/*.js\" && npx stylelint \"static/css/**/*.css\"",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/philomusica/philo-hugo-theme.git"
+  },
+  "author": "Joshua Crunden",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/philomusica/philo-hugo-theme/issues"
+  },
+  "homepage": "https://github.com/philomusica/philo-hugo-theme#readme",
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "jest": "^27.0.6",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^22.0.0"
+  }
+}
