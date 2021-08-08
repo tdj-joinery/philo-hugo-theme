@@ -82,6 +82,7 @@ button:active {
 
 .header-logo img {
   height: 7rem;
+  width: auto;
   display: block;
   margin: 0 auto;
 }
