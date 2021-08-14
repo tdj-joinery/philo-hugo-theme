@@ -58,6 +58,7 @@ button:active {
 }
 
 .menu-link {
+  background-color: white;
   transition: all 0.3s ease;
 }
 
@@ -81,6 +82,7 @@ button:active {
 
 .header-logo img {
   height: 7rem;
+  width: auto;
   display: block;
   margin: 0 auto;
 }
@@ -140,18 +142,14 @@ button:active {
 /* FOOTER */
 
 footer {
-  background-color: #222;
-  color: #c0c0c0;
-  padding: 3rem;
+  background-color: #f8f8f8;
+  color: #a0a0a0;
+  padding: 1rem 0;
 }
 
 footer .container {
   display: flex;
   justify-content: space-between;
-}
-
-.footer-text {
-  flex-basis: 50%;
 }
 
 .social-media-links i {
@@ -167,9 +165,3 @@ footer .container {
   color: #1da1f2;
 }
 
-@media only screen and (max-width: 530px) {
-  .social-media-links {
-    display: flex;
-    flex-direction: column;
-  }
-}
