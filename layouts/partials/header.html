@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="header">
+    <div class="menu-icons">
+      <i aria-hidden="true" title="Open Menu" class="fas fa-bars hamburger"></i>
+      <i aria-hidden="true" title="Close Menu" class="fas fa-times cross"></i>
+    </div>
+    <div class="header-logo">
+          <img alt="Philomusica logo" src="/img/logo.jpg"/>
+    </div>
+    <nav class="menu">
+      {{ range .Site.Sections.ByWeight }}
+        {{ if not (eq .Params.noMenu true) }}
+          <div class="menu-item {{ if .Pages}}sub-menu{{ end }}">
+              {{ if .Pages }}
+                <div class="sub-menu-name">{{ .Title }}<i class="fas fa-chevron-down"></i></div>
+              {{ else }}
+                <a class="menu-link" href="{{ .URL }}">{{ .Title }}</a>
+              {{ end }}
+            {{ if .Pages }}
+              <div class="sub-items collapsible hidden">
+                {{ range .Pages }}
+                  <a class="menu-link" href="{{ .URL }}">{{ .Title }}</a>
+                {{ end }}
+              </div>
+            {{ end }}
+          </div>
+        {{ end }}
+      {{ end }}
+    </nav>
+    <form action="{{ .Site.Params.CallToActionLink }}" class="call-to-action">
+          <input type="submit" value="{{ .Site.Params.CallToActionText }}"/>
+    </form>
+  </div>
+</div>
