@@ -6,3 +6,11 @@
   src: url('../fonts/nunito-v16-latin-regular.woff2') format('woff2');
   font-display: swap;
 }
+
+@font-face {
+  font-family: 'Nunito';
+  font-style: lighter;
+  font-weight: 200;
+  src: url('../fonts/nunito-v16-latin-200.woff2') format('woff2');
+  font-display: swap;
+}
