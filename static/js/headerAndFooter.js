@@ -15,7 +15,7 @@ const flattenNavItems = () => {
 };
 
 const setNavBarHeight = () => {
-    const navBarHeight = menuItem[0].scrollHeight * menuItem.length;
+    const navBarHeight = menuItem[0].scrollHeight * menuItem.length + 10;
     menu.style.height = navBarHeight + "px";
 };
 

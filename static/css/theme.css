@@ -59,7 +59,6 @@ button:active {
 }
 
 .menu-link {
-  background-color: white;
   transition: all 0.3s ease;
 }
 
@@ -140,6 +139,22 @@ button:active {
   transform: rotate(180deg);
 }
 
+/* HERO IMAGE */
+
+.hero-image {
+  height: 50vh;
+  background-position: center;
+  display: flex;
+}
+
+.hero-image-text {
+  text-align: center;
+  margin: auto;
+  color: #c9c9c9;
+  font-style: italic;
+  font-size: 1.25rem;
+}
+
 /* FOOTER */
 
 footer {
@@ -164,4 +179,3 @@ footer .container {
 .fa-twitter:hover {
   color: #1da1f2;
 }
-
