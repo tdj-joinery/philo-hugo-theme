@@ -157,11 +157,25 @@ button:active {
   font-size: 1.25rem;
 }
 
+/* TEXT BODY */
+
+.section {
+  padding: 2rem 0;
+}
+
+.section:nth-child(odd) {
+  background-color: #f8f8f8;
+}
+
 /* FOOTER */
 
 footer {
-  background-color: #f8f8f8;
+  background-color: #d8d8d8;
   padding: 1rem 0;
+}
+
+.footer-text div, .social-media-links {
+  color: #333333;
 }
 
 footer .container {
