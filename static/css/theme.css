@@ -36,6 +36,10 @@ button:active {
   background-color: #1d4b88;
 }
 
+p {
+  margin: 1rem 0;
+}
+
 /* HEADER */
 
 .header,
@@ -141,35 +145,47 @@ button:active {
 
 /* HERO IMAGE */
 
-.hero-image {
-  height: 50vh;
+.hero-image,
+.small-hero-image {
   width: 100%;
   background-size: cover;
   background-position: center;
   display: flex;
 }
 
-.hero-image-text {
+.hero-image {
+  height: 50vh;
+}
+
+.small-hero-image {
+  height: 25vh;
+}
+
+.hero-image-text,
+.small-hero-image-text {
   text-align: center;
   margin: auto;
   color: #c9c9c9;
   font-style: italic;
+}
+
+.hero-image-text {
   font-size: 1.25rem;
 }
 
 /* TEXT BODY */
 
 .section,
-.news {
-  text-align: center;
-}
-
-.section {
+.intro {
   padding: 2rem 0;
 }
 
 .news {
-  padding-top: 4rem;
+  padding: 4rem 0 0 0;
+}
+
+.center {
+  text-align: center;
 }
 
 .row {
@@ -205,7 +221,7 @@ button:active {
   padding: 10vh 0;
 }
 
-.section:nth-child(odd) {
+.section:nth-of-type(even) {
   background-color: #f8f8f8;
 }
 
