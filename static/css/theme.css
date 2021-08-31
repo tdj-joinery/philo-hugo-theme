@@ -5,6 +5,7 @@
   padding: 0;
   text-decoration: none;
   font-family: 'Nunito', Arial, Helvetica, sans-serif;
+  color: #6f6f6f;
 }
 
 .no-display {
@@ -142,8 +143,7 @@ button:active {
 /* FOOTER */
 
 footer {
-  background-color: #f8f8f8;
-  color: #a0a0a0;
+  background-color: #e5e5e5;
   padding: 1rem 0;
 }
 
@@ -154,7 +154,7 @@ footer .container {
 
 .social-media-links i {
   font-size: 1.5rem;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem;
 }
 
 .fa-facebook:hover {
