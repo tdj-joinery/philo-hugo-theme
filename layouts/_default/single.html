@@ -14,11 +14,13 @@
 			<div class="container">
 				<h2 class="news-title">{{ $e.title }}</h2>
 				<div class="row{{ if not (modBool $i 2) }} reverse{{ end }}">
-					<div class="column">{{ $e.text | markdownify }}</div>
 					{{ if isset $e "image" }}
+						<div class="column">{{ $e.text | markdownify }}</div>
 						<div class="center column">
 							<img class="column-image" alt="{{ $e.image_description }}" loading="lazy" src="{{ $e.image }}"/>
 						</div>
+					{{ else }}
+						<div class="column center">{{ $e.text | markdownify }}</div>
 					{{ end }}
 				</div>
 			</div>
