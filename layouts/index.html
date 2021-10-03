@@ -3,15 +3,25 @@
 		<div class="hero-image-text">We are the music makers and we are the dreamers of dreams</div>
 	</div>
 	<div class="section">
-		<div class="container">Section 1</div>
+		<h1>{{ .Title }}</h1>
+		<img class="music-icon" src="/img/musical-notes-outline.svg" alt="music-icon"/>
+		<div class="text-body">{{ .Content }}</div>
 	</div>
-	<div class="section">
-		<div class="container">Section 2</div>
-	</div>
-	<div class="section">
-		<div class="container">Section 3</div>
-	</div>
-	<div class="section">
-		<div class="container">Section 4</div>
+	<hr>
+	<div class="news">
+		<h1>News</h1>
+	{{ range $i, $e := .Params.news }}
+		<div class="section">
+			<div class="container">
+				<h2 class="news-title">{{ $e.title }}</h2>
+				<div class="row{{ if not (modBool $i 2) }} reverse{{ end }}">
+					<div class="column">{{ $e.body }}</div>
+					<div class="column">
+						<img class="column-image" src="/img/philo-tewks-with-soloists-min.jpg"/>
+					</div>
+				</div>
+			</div>
+		</div>
+	{{ end }}
 	</div>
 {{ end }}
