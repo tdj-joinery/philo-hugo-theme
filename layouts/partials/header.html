@@ -33,8 +33,6 @@
         {{ end }}
       {{ end }}
     </nav>
-    <form action="{{ .Site.Params.call_to_action_link }}" class="call-to-action">
-          <input type="submit" value="{{ .Site.Params.call_to_action_text }}"/>
-    </form>
+	<a class="call-to-action" href="{{ .Site.Params.call_to_action_link }}">{{ .Site.Params.call_to_action_text }}</a>
   </div>
 </div>

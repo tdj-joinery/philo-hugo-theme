@@ -1,0 +1,121 @@
+/* CONTACT */
+
+form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.form-input {
+    width: 100%;
+    position: relative;
+}
+
+input:focus ~ .floating-label,
+input:not(:focus):valid ~ .floating-label,
+textarea:focus ~ .floating-label,
+textarea:not(:focus):valid ~ .floating-label {
+  top: -10px;
+  bottom: 10px;
+  left: 20px;
+  font-size: 0.75rem;
+  opacity: 1;
+  background-color: white;
+  outline: none;
+}
+
+.inputText {
+  font-size: 1rem;
+}
+
+.floating-label {
+  position: absolute;
+  pointer-events: none;
+  left: 20px;
+  top: 5px;
+  transition: 0.2s ease all;
+  height: 1.5rem;
+  padding: 0px 3px;
+}
+
+
+@media only screen and (max-width: 770px) {
+    form {
+        width: 90%;
+    }
+}
+
+input, textarea, .g-recaptcha {
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+input, textarea {
+    border: solid 1px #f0f0f0;
+    padding: 10px;
+    width: 100%;
+}
+
+textarea:focus, .textInput:focus {
+    outline: 0;
+    border: solid 1px #2f74ce;
+}
+
+.form-submit, .form-submit:after {
+    width: 60%;
+    margin: auto;
+    color: #2f74ce;
+    border: 2px solid #2f74ce;
+    transition: all 0.3s linear;
+}
+
+.form-submit:hover {  
+    background-color: #2f74ce;
+    border: 2px solid #2f74ce;
+    color: white;
+}
+
+.form-submit:active {
+    transition: none;
+    color: white;
+    border: 2px solid #1e4a81;
+    background-color: #1e4a81;
+}
+
+.feedback-section {
+    position: relative;
+    height: 2rem;
+    transition: all 1s ease-in-out;
+}
+
+.alert {
+    color: white;
+    padding: 0.5rem;
+    width: 90%;
+    border-radius: 6px;
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+}
+
+.alert-success {
+    background-color: #4caf50;
+}
+
+.alert-fail {
+    background-color: #f44336;
+}
+
+.alert-warn {
+    background-color: #ffbf00;
+}
+
+.alert i {
+    float: left;
+    color: white;
+}
+
+.transparent {
+    opacity: 0;
+    transform: translateY(3rem);
+}
+
