@@ -6,6 +6,7 @@
   text-decoration: none;
   font-family: 'Nunito', Arial, Helvetica, sans-serif;
   color: #6f6f6f;
+  line-height: 150%;
 }
 
 .no-display {
@@ -38,6 +39,37 @@ button:active {
 
 p {
   margin: 1rem 0;
+}
+
+table {
+  margin: auto;
+  border-spacing: 0;
+}
+
+tbody tr:nth-of-type(odd) {
+  background-color: #f8f8f8;
+}
+
+th,
+td {
+  padding: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  table thead {
+    display: none;
+  }
+
+  table td {
+    display: flex;
+  }
+
+  table td::before {
+    content: attr(label);
+    font-weight: bold;
+    width: 120px;
+    min-width: 120px;
+  }
 }
 
 /* HEADER */
@@ -201,6 +233,12 @@ p {
   margin: auto;
 }
 
+@media only screen and (max-width: 970px) {
+  .column {
+    width: 90%;
+  }
+}
+
 @media only screen and (max-width: 500px) {
   .row {
     flex-direction: column;
@@ -208,10 +246,6 @@ p {
 
   .reverse {
     flex-direction: column-reverse;
-  }
-
-  .column {
-    width: 90%;
   }
 }
 

@@ -9,16 +9,20 @@
         <img alt="Philomusica logo" width="85.94" height="112" src="/img/logo.jpg"/>
       </a>
     </div>
+	{{ $menuItem := .Site.Sections.ByWeight }}
+	{{ if eq .Site.Params.include_home_in_menu true }}
+		{{ $menuItem = slice (.Site.Home) | append $menuItem }}
+	{{ end }}
     <nav class="menu">
-      {{ range .Site.Sections.ByWeight }}
+      {{ range $menuItem }}
         {{ if not (eq .Params.noMenu true) }}
           <div class="menu-item {{ if .Pages}}sub-menu{{ end }}">
-              {{ if .Pages }}
+              {{ if and (.Pages) (not .IsHome) }}
                 <div class="sub-menu-name">{{ .Title }}<i class="fas fa-chevron-down"></i></div>
               {{ else }}
                 <a class="menu-link" href="{{ .Permalink }}">{{ .Title }}</a>
               {{ end }}
-            {{ if .Pages }}
+              {{ if and (.Pages) (not .IsHome) }}
               <div class="sub-items collapsible hidden">
                 {{ range .Pages }}
                   <a class="menu-link" href="{{ .Permalink }}">{{ .Title }}</a>
