@@ -16,7 +16,7 @@
     <nav class="menu">
       {{ range $menuItem }}
         {{ if not (eq .Params.noMenu true) }}
-          <div class="menu-item {{ if .Pages}}sub-menu{{ end }}">
+          <div class="menu-item {{ if and .Pages (not .IsHome) }}sub-menu{{ end }}">
               {{ if and (.Pages) (not .IsHome) }}
                 <div class="sub-menu-name">{{ .Title }}<i class="fas fa-chevron-down"></i></div>
               {{ else }}
