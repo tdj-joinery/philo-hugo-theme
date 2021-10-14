@@ -6,6 +6,7 @@
   text-decoration: none;
   font-family: 'Nunito', Arial, Helvetica, sans-serif;
   color: #6f6f6f;
+  line-height: 150%;
 }
 
 .no-display {
@@ -17,19 +18,12 @@
   margin: auto;
 }
 
-a {
-  color: inherit;
-}
-
-input {
+.call-to-action {
   color: white;
   background-color: #2f74ce;
   padding: 1rem;
-  border: none;
   border-radius: 5px;
-  font: inherit;
   cursor: pointer;
-  outline: none;
 }
 
 button:active {
@@ -38,6 +32,38 @@ button:active {
 
 p {
   margin: 1rem 0;
+}
+
+table {
+  margin: auto;
+  border-spacing: 0;
+}
+
+tbody tr:nth-of-type(odd) {
+  background-color: #f8f8f8;
+}
+
+th,
+td {
+  padding: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+  table thead {
+    display: none;
+  }
+
+  table td {
+    display: flex;
+	text-align: left;
+  }
+
+  table td::before {
+    content: attr(label);
+    font-weight: bold;
+    width: 120px;
+    min-width: 120px;
+  }
 }
 
 /* HEADER */
@@ -64,6 +90,7 @@ p {
 
 .menu-link {
   transition: all 0.3s ease;
+  background-color: white;
 }
 
 .menu-link:hover,
@@ -104,8 +131,7 @@ p {
     align-items: flex-start;
   }
 
-  .menu-icons,
-  .call-to-action {
+  .menu-icons {
     flex-basis: 5rem;
     display: flex;
     justify-content: center;
@@ -201,6 +227,12 @@ p {
   margin: auto;
 }
 
+@media only screen and (max-width: 970px) {
+  .column {
+    width: 90%;
+  }
+}
+
 @media only screen and (max-width: 500px) {
   .row {
     flex-direction: column;
@@ -208,10 +240,6 @@ p {
 
   .reverse {
     flex-direction: column-reverse;
-  }
-
-  .column {
-    width: 90%;
   }
 }
 
@@ -236,6 +264,32 @@ hr {
   background-image: linear-gradient(to right, transparent, #2f74ce, transparent);
   width: 50%;
   margin: auto;
+}
+
+/* Link styling */ 
+a:not(.menu-link):not(.call-to-action):not(.media-link):not(.gallery-image) {
+  text-decoration: none;
+  color: #2f74ce;
+  position: relative;
+}
+
+a:not(.menu-link):not(.call-to-action):not(.media-link):not(.gallery-image)::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background-color: #2f74ce;
+  transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  a:not(.menu-link):not(.call-to-action):not(.media-link):not(.gallery-image):hover::before{
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
 }
 
 .music-icon {

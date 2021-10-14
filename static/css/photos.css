@@ -1,0 +1,31 @@
+.gallery {
+  display: flex;
+}
+
+.gallery-image {
+  width: 25%;
+}
+
+.gallery-image
+img {
+  max-width: 80%;
+  max-height: 50vh;
+  display: block;
+  margin: 1rem auto;
+}
+
+@media only screen and (max-width: 770px) {
+  .gallery-image {
+    width: 33%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .gallery {
+    flex-direction: column;
+  }
+
+  .gallery-image {
+    width: 100%;
+  }
+}
