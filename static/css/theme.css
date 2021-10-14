@@ -55,7 +55,7 @@ td {
 
   table td {
     display: flex;
-	text-align: left;
+    text-align: left;
   }
 
   table td::before {
@@ -111,6 +111,12 @@ td {
   visibility: hidden;
 }
 
+article img {
+  max-height: 30vh;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
 .header-logo img {
   height: 7rem;
   width: auto;
@@ -141,6 +147,10 @@ td {
     position: static;
     margin-left: 2rem;
     float: none;
+  }
+
+  .menu-link {
+    background-color: transparent;
   }
 }
 
@@ -197,6 +207,18 @@ td {
 
 .hero-image-text {
   font-size: 1.25rem;
+}
+
+/* LIST PAGES */
+
+article {
+  display: flex;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.list-title {
+  margin-left: 1rem;
 }
 
 /* TEXT BODY */
@@ -266,14 +288,14 @@ hr {
   margin: auto;
 }
 
-/* Link styling */ 
+/* Link styling */
 a:not(.menu-link):not(.call-to-action):not(.media-link):not(.gallery-image) {
   text-decoration: none;
   color: #2f74ce;
   position: relative;
 }
 
-a:not(.menu-link):not(.call-to-action):not(.media-link):not(.gallery-image)::before{
+a:not(.menu-link):not(.call-to-action):not(.media-link):not(.gallery-image)::before {
   content: '';
   position: absolute;
   bottom: 0;
@@ -285,7 +307,7 @@ a:not(.menu-link):not(.call-to-action):not(.media-link):not(.gallery-image)::bef
 }
 
 @media (hover: hover) and (pointer: fine) {
-  a:not(.menu-link):not(.call-to-action):not(.media-link):not(.gallery-image):hover::before{
+  a:not(.menu-link):not(.call-to-action):not(.media-link):not(.gallery-image):hover::before {
     left: 0;
     right: auto;
     width: 100%;
