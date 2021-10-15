@@ -9,6 +9,10 @@
   line-height: 150%;
 }
 
+html {
+  font-size: 18px;
+}
+
 .no-display {
   display: none;
 }
