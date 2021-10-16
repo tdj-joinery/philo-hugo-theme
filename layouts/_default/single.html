@@ -8,6 +8,11 @@
 			<h1>{{ .Title }}</h1>
 		</div>
 	{{ end }}
+	{{ if not .Parent.IsHome }}
+		<div class="container">
+			<a href="{{ .Parent.Permalink }}">< Back to {{ .Parent.Title }}</a>
+		</div>
+	{{ end }}
 	<div>
 	{{ range $i, $e := .Params.sections }}
 		<div class="section">

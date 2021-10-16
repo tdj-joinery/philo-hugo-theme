@@ -5,12 +5,39 @@
 	<div>
 		<div class="section">
 			<div class="container">
+				{{ if not .Parent.IsHome }}
+					<a href="{{ .Parent.Permalink }}">< Back to {{ .Parent.Title }}</a>
+				{{ end }}
 				{{ range .Pages }}
+					{{ $image := "" }}
+					{{ $image_description := "" }}
+					{{ if isset .Params "sections" }}
+						{{ $section := index (.Params.Sections) 0 }}
+						{{ $image = $section.image }}
+						{{ $image_description = $section.image_description }}
+					{{ end }}
+					{{ if isset .Params "thumb" }}
+                          {{ $image = .Params.thumb.image }}
+                          {{ $image_description = .Params.thumb.image_description }}
+					{{ end }}
+					{{ if isset .Params "no_thumb" }}
+						{{ $image = "" }}
+						{{ $image_description = "" }}
+					{{ end }}
+					<a class="media-link" href="{{ .Permalink }}">
 					<article>
-						<h2>{{ .Title }}</h2>
+						<div class="list-image">
+							<img alt="{{ $image_description }}"src="{{ $image }}"/>
+						</div>
+						<div class="list-title">
+							<h1>{{ .Title }}</h1>
+							<a href="{{ .Permalink }}">More info...</a>
+						</div>
 					</article>
+					</a>
 				{{ end }}
 			</div>
 		</div>
 	</div>
 {{ end }}
+
