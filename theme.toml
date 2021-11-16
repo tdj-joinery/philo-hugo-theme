@@ -3,13 +3,13 @@
 
 name = "Philo Hugo Theme"
 license = "MIT"
-licenselink = "https://github.com/philomusica/philo-hugo-theme/blob/main/LICENSE"
-description = "Theme for the Philomusica website"
-homepage = "https://philomusica.org.uk"
+licenselink = "https://github.com/tdj-joinery/philo-hugo-theme/blob/main/LICENSE"
+description = "Theme for the TDJ Joinery website"
+homepage = "https://tdj-joinery.co.uk"
 tags = []
 features = []
 min_version = "0.41.0"
 
 [author]
   name = "Joshua Crunden"
-  homepage = "https://philomusica.org.uk"
+  homepage = "https://tdj-joinery.co.uk"
