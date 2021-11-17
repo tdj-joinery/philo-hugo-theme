@@ -3,12 +3,12 @@
     <div class="menu-icons">
       <i aria-hidden="true" title="Open Menu" class="fas fa-bars hamburger"></i>
       <i aria-hidden="true" title="Close Menu" class="fas fa-times cross"></i>
-    </div>
-    <div class="header-logo">
-      <a href="/">
-        <img alt="TDJ Joinery logo" width="85.94" height="112" src="/img/logo.jpg"/>
-      </a>
-    </div>
+	</div>
+	  <div class="header-logo">
+		<a class="media-link" href="/">
+			<h3>TDJ JOINERY</h3>
+		</a>
+      </div>
 	{{ $menuItem := .Site.Sections.ByWeight }}
 	{{ if eq .Site.Params.include_home_in_menu true }}
 		{{ $menuItem = slice (.Site.Home) | append $menuItem }}
@@ -18,7 +18,7 @@
         {{ if not (eq .Params.noMenu true) }}
           <div class="menu-item {{ if and .Pages (not .IsHome) }}sub-menu{{ end }}">
               {{ if and (.Pages) (not .IsHome) }}
-                <div class="sub-menu-name">{{ .Title }}<i class="fas fa-chevron-down"></i></div>
+                <div class="sub-menu-item"><a class="sub-menu-name" href="{{ .Permalink }}">{{ .Title }}</a><i class="fas fa-chevron-down"></i></div>
               {{ else }}
                 <a class="menu-link" href="{{ .Permalink }}">{{ .Title }}</a>
               {{ end }}

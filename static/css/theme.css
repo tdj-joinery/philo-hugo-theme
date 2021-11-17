@@ -92,6 +92,11 @@ td {
   white-space: nowrap;
 }
 
+.sub-menu-item {
+  display: flex;
+  align-items: center;
+}
+
 .menu-link {
   transition: all 0.3s ease;
   background-color: white;
@@ -121,11 +126,13 @@ article img {
   border-radius: 10px;
 }
 
-.header-logo img {
+.header-logo a {
   height: 7rem;
   width: auto;
-  display: block;
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media only screen and (max-width: 970px) {
@@ -293,13 +300,13 @@ hr {
 }
 
 /* Link styling */
-a:not(.menu-link):not(.call-to-action):not(.media-link):not(.gallery-image) {
+a:not(.menu-link):not(.call-to-action):not(.media-link):not(.gallery-image):not(.sub-menu-name) {
   text-decoration: none;
   color: #2f74ce;
   position: relative;
 }
 
-a:not(.menu-link):not(.call-to-action):not(.media-link):not(.gallery-image)::before {
+a:not(.menu-link):not(.call-to-action):not(.media-link):not(.gallery-image):not(.sub-menu-name)::before {
   content: '';
   position: absolute;
   bottom: 0;
