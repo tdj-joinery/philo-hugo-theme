@@ -24,14 +24,14 @@ html {
 
 .call-to-action {
   color: white;
-  background-color: #2f74ce;
+  background-color: #eb984e;
   padding: 1rem;
   border-radius: 5px;
   cursor: pointer;
 }
 
 button:active {
-  background-color: #1d4b88;
+  background-color: #cf711f;
 }
 
 p {
@@ -294,7 +294,7 @@ h1 {
 hr {
   border: 0;
   height: 2px;
-  background-image: linear-gradient(to right, transparent, #2f74ce, transparent);
+  background-image: linear-gradient(to right, transparent, #eb984e, transparent);
   width: 50%;
   margin: auto;
 }
@@ -302,7 +302,7 @@ hr {
 /* Link styling */
 a:not(.menu-link):not(.call-to-action):not(.media-link):not(.gallery-image):not(.sub-menu-name) {
   text-decoration: none;
-  color: #2f74ce;
+  color: #eb984e;
   position: relative;
 }
 
@@ -313,7 +313,7 @@ a:not(.menu-link):not(.call-to-action):not(.media-link):not(.gallery-image):not(
   right: 0;
   width: 0;
   height: 2px;
-  background-color: #2f74ce;
+  background-color: #eb984e;
   transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
 

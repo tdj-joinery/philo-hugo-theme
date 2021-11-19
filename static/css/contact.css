@@ -61,29 +61,29 @@ textarea {
 textarea:focus,
 .textInput:focus {
   outline: 0;
-  border: solid 1px #2f74ce;
+  border: solid 1px #e67e22;
 }
 
 .form-submit,
 .form-submit::after {
   width: 60%;
   margin: auto;
-  color: #2f74ce;
-  border: 2px solid #2f74ce;
+  color: #e67e22;
+  border: 2px solid #e67e22;
   transition: all 0.3s linear;
 }
 
 .form-submit:hover {
-  background-color: #2f74ce;
-  border: 2px solid #2f74ce;
+  background-color: #e67e22;
+  border: 2px solid #e67e22;
   color: white;
 }
 
 .form-submit:active {
   transition: none;
   color: white;
-  border: 2px solid #1e4a81;
-  background-color: #1e4a81;
+  border: 2px solid #cf711f;
+  background-color: #cf711f;
 }
 
 .feedback-section {
