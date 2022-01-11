@@ -266,6 +266,12 @@ article {
   }
 }
 
+.column-image {
+  max-height: 75vh;
+  max-width: 80%;
+  padding: 10vh 0;
+}
+
 @media only screen and (max-width: 500px) {
   .row {
     flex-direction: column;
@@ -274,12 +280,10 @@ article {
   .reverse {
     flex-direction: column-reverse;
   }
-}
 
-.column-image {
-  max-height: 75vh;
-  max-width: 80%;
-  padding: 10vh 0;
+  .column-image {
+    max-width: 100%;
+  }
 }
 
 .section:nth-of-type(even) {
