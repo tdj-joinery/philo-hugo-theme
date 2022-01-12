@@ -35,12 +35,12 @@
 								<textarea id="message" rows="4" cols="50" required></textarea>
 								<span class="floating-label">Message</span>
 							</div>
-							<div class="g-recaptcha" data-sitekey="6LfXegIaAAAAABxOed3E9MQJYVYS7nFpWT-B23sM"></div>
+							<div class="g-recaptcha" data-sitekey="{{ .Site.Params.RecaptchaKey }}"></div>
 							<input class="form-submit" type="submit" />
 						</form>
 						<div class="feedback-section page-row container">
 							<div class="alert alert-success transparent">
-								<i class="far fa-check-circle"></i>
+								<i class="fas fa-check-circle"></i>
 								Message sent to TDJ Joinery. We will respond to your message as soon as possible!
 							</div>
 							<div class="alert alert-fail transparent">
